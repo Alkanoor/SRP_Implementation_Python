@@ -1,0 +1,18 @@
+============================================
+SRP Client/Serveur
+============================================
+
+
+Ceci est un ensemble de 3 programmes basiques en python recréant une authentification SRP.
+Le programme SRP_Server.py est comme son nom l'indique le serveur.
+Le programme SRP_Client.py est également comme son nom l'indique le client.
+Le programme generateUsers.py permet d'ajouter des utilisateurs dans le fichier users.txt (si le fichier n'existe pas il est crée).
+Le fichier possibleN.txt contient 4 grands entiers premiers "safe" pouvant être utilisés lors de l'authentification.
+Chaque utilisateur crée l'est avec un salt différent pour chaque entier N du fichier possibleN.txt.
+
+Pour que ce soit simple d'utilisation, un makefile permet de lancer chaque programme séparément ou ensemble.
+
+make add-user permet d'ajouter un utilisateur au fichier des utilisateurs
+make permet de lancer le serveur sur le port 3333 en arrière-plan avec le client immédiatement après
+make run-server permet de lancer uniquement le serveur sur le port 3333
+make run-client permet de lancer le client
